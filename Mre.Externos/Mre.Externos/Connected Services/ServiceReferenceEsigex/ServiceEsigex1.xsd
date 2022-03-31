@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="DetalleDatosVisaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListDatosVisa" nillable="true" type="tns:ArrayOfDatosVisaInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleDatosVisaInfo" nillable="true" type="tns:DetalleDatosVisaInfo" />
+  <xs:complexType name="ArrayOfDatosVisaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="DatosVisaInfo" nillable="true" type="tns:DatosVisaInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfDatosVisaInfo" nillable="true" type="tns:ArrayOfDatosVisaInfo" />
+  <xs:complexType name="DatosVisaInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="EstadoVisa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaCaducidad" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FechaConcesion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdActoConsularVisa" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCentroAdministrativo" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPersona" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTramite" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="NombreActoConsularVisa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NombreCentroAdministrativo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombres" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroPasaporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroVisa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PrimerApellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SegundoApellido" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DatosVisaInfo" nillable="true" type="tns:DatosVisaInfo" />
+  <xs:complexType name="CancelacionVisasMessage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdActoConsularCancelacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdActoConsularVisa" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCentroAdministrativo" type="xs:int" />
+      <xs:element minOccurs="0" name="IdCentroAdministrativoCancelacion" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFuncionario" type="xs:int" />
+      <xs:element minOccurs="0" name="IdFuncionarioNuevoSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="IdPersona" type="xs:int" />
+      <xs:element minOccurs="0" name="IdSignatario" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTramite" type="xs:int" />
+      <xs:element minOccurs="0" name="IdTramiteNuevoSistema" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroPasaporte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="NumeroVisa" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ObservacionesCancelacion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="contrasenia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CancelacionVisasMessage" nillable="true" type="tns:CancelacionVisasMessage" />
+  <xs:complexType name="DetalleVisaCancelacionInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Codigo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Detalle" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdTramite" type="xs:int" />
+      <xs:element minOccurs="0" name="NumeroTramite" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="DetalleVisaCancelacionInfo" nillable="true" type="tns:DetalleVisaCancelacionInfo" />
+</xs:schema>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceAsuntosMigratorios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" />
+  <xs:element name="GuardarSolicitudVisa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="datos" nillable="true" type="q1:SolicitudInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarSolicitudVisaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="GuardarSolicitudVisaResult" nillable="true" type="q2:GeneracionSolicitudMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarVisa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="datos" nillable="true" type="q3:VisaInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarVisaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="GuardarVisaResult" nillable="true" type="q4:GeneracionVisaMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerarOrdenCedulacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="datos" nillable="true" type="q5:OrdenCedulacionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GenerarOrdenCedulacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="GenerarOrdenCedulacionResult" nillable="true" type="q6:OrdenCedulacionMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarOrdenCedulacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="datos" nillable="true" type="q7:OrdenCedulacionV2Info" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ActualizarOrdenCedulacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="ActualizarOrdenCedulacionResult" nillable="true" type="q8:OrdenCedulacionMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

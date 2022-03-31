@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceComun.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Mre.Sicof.CuentasConsulares.Business.Entity" />
+  <xs:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceComun.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Logica.ReferenciaMantenimientosAsuntosMigratoriosWs" />
+  <xs:element name="TraerListaEntidadesAuspiciantesPorVisa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idActoConsularVisa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraerListaEntidadesAuspiciantesPorVisaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Mre.Sicof.CuentasConsulares.Business.Entity" minOccurs="0" name="TraerListaEntidadesAuspiciantesPorVisaResult" nillable="true" type="q1:ArrayOfEntidadAuspicianteCentroAdministrativo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerActividadesPorTipoVisa">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idActoConsularVisa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerActividadesPorTipoVisaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Logica.ReferenciaMantenimientosAsuntosMigratoriosWs" minOccurs="0" name="ObtenerActividadesPorTipoVisaResult" nillable="true" type="q2:ArrayOfObtenerActividadesPorTipoVisa_Result" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraerRequisitosVisasPorActoConsular">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="idActoConsularVisa" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="TraerRequisitosVisasPorActoConsularResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Mre.Sicof.CuentasConsulares.Business.Entity" minOccurs="0" name="TraerRequisitosVisasPorActoConsularResult" nillable="true" type="q3:ArrayOfRequisito" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

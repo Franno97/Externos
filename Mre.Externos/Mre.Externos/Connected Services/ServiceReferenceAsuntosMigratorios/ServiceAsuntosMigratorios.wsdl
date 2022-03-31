@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceAsuntosMigratorios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceAsuntosMigratorios.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceAsuntosMigratorios.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceAsuntosMigratorios.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServiceAsuntosMigratorios_GuardarSolicitudVisa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSolicitudVisa" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_GuardarSolicitudVisa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarSolicitudVisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_GuardarVisa_InputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarVisa" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_GuardarVisa_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GuardarVisaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_GenerarOrdenCedulacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarOrdenCedulacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_GenerarOrdenCedulacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenerarOrdenCedulacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_ActualizarOrdenCedulacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarOrdenCedulacion" />
+  </wsdl:message>
+  <wsdl:message name="IServiceAsuntosMigratorios_ActualizarOrdenCedulacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ActualizarOrdenCedulacionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServiceAsuntosMigratorios">
+    <wsdl:operation name="GuardarSolicitudVisa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/GuardarSolicitudVisa" message="tns:IServiceAsuntosMigratorios_GuardarSolicitudVisa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/GuardarSolicitudVisaResponse" message="tns:IServiceAsuntosMigratorios_GuardarSolicitudVisa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GuardarVisa">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/GuardarVisa" message="tns:IServiceAsuntosMigratorios_GuardarVisa_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/GuardarVisaResponse" message="tns:IServiceAsuntosMigratorios_GuardarVisa_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenerarOrdenCedulacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/GenerarOrdenCedulacion" message="tns:IServiceAsuntosMigratorios_GenerarOrdenCedulacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/GenerarOrdenCedulacionResponse" message="tns:IServiceAsuntosMigratorios_GenerarOrdenCedulacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarOrdenCedulacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/ActualizarOrdenCedulacion" message="tns:IServiceAsuntosMigratorios_ActualizarOrdenCedulacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServiceAsuntosMigratorios/ActualizarOrdenCedulacionResponse" message="tns:IServiceAsuntosMigratorios_ActualizarOrdenCedulacion_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServiceAsuntosMigratorios" type="tns:IServiceAsuntosMigratorios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GuardarSolicitudVisa">
+      <soap:operation soapAction="http://tempuri.org/IServiceAsuntosMigratorios/GuardarSolicitudVisa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GuardarVisa">
+      <soap:operation soapAction="http://tempuri.org/IServiceAsuntosMigratorios/GuardarVisa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenerarOrdenCedulacion">
+      <soap:operation soapAction="http://tempuri.org/IServiceAsuntosMigratorios/GenerarOrdenCedulacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizarOrdenCedulacion">
+      <soap:operation soapAction="http://tempuri.org/IServiceAsuntosMigratorios/ActualizarOrdenCedulacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServiceAsuntosMigratorios">
+    <wsdl:port name="BasicHttpBinding_IServiceAsuntosMigratorios" binding="tns:BasicHttpBinding_IServiceAsuntosMigratorios">
+      <soap:address location="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceAsuntosMigratorios.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

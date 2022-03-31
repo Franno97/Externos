@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://192.168.139.33/MREMH.ServiciosEsigexVisasRegularizacion.ServiceInterno/ServiceEsigex.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" />
+  <xs:element name="BuscarVisaPorNumero">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="numeroVisa" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrasenia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarVisaPorNumeroResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="BuscarVisaPorNumeroResult" nillable="true" type="q1:DetalleDatosVisaInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarVisaPorDatosPersona">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="nombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="primerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="segundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="idNacionalidad" type="xs:int" />
+        <xs:element minOccurs="0" name="fechaNacimiento" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="usuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="contrasenia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BuscarVisaPorDatosPersonaResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="BuscarVisaPorDatosPersonaResult" nillable="true" type="q2:DetalleDatosVisaInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCancelacionPorOficioVisas">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="param" nillable="true" type="q3:CancelacionVisasMessage" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GuardarCancelacionPorOficioVisasResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Entidad" minOccurs="0" name="GuardarCancelacionPorOficioVisasResult" nillable="true" type="q4:DetalleVisaCancelacionInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

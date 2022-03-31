@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Logica.ReferenciaMantenimientosAsuntosMigratoriosWs" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/MREMH.ServiciosEsigexVisasRegularizacion.Logica.ReferenciaMantenimientosAsuntosMigratoriosWs" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ArrayOfObtenerActividadesPorTipoVisa_Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ObtenerActividadesPorTipoVisa_Result" nillable="true" type="tns:ObtenerActividadesPorTipoVisa_Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfObtenerActividadesPorTipoVisa_Result" nillable="true" type="tns:ArrayOfObtenerActividadesPorTipoVisa_Result" />
+  <xs:complexType name="ObtenerActividadesPorTipoVisa_Result">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:ComplexObject">
+        <xs:sequence>
+          <xs:element name="idField" type="xs:int" />
+          <xs:element name="nombreField" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ObtenerActividadesPorTipoVisa_Result" nillable="true" type="tns:ObtenerActividadesPorTipoVisa_Result" />
+  <xs:complexType name="ComplexObject">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:StructuralObject">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="ComplexObject" nillable="true" type="tns:ComplexObject" />
+  <xs:complexType name="StructuralObject">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="StructuralObject" nillable="true" type="tns:StructuralObject" />
+</xs:schema>
